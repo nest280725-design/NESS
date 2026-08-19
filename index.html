@@ -8,58 +8,25 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet"
->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
-
-/* =========================
-   RESET
-========================= */
 
 * {
     box-sizing: border-box;
 }
 
-html,
 body {
     margin: 0;
-    padding: 0;
-
-    width: 100%;
-    min-height: 100%;
-
-    font-family: 'Orbitron', sans-serif;
-}
-
-/* =========================
-   พื้นหลัง
-========================= */
-
-body {
-
     min-height: 100vh;
-    min-height: 100svh;
 
-    background:
-        radial-gradient(
-            circle at center,
-            #180000 0%,
-            #080808 55%,
-            #030303 100%
-        );
+    background: #080808;
 
     display: flex;
-
     justify-content: center;
     align-items: center;
 
-    padding: 20px;
-
-    overflow: hidden;
+    font-family: 'Orbitron', sans-serif;
 }
 
 /* =========================
@@ -67,11 +34,11 @@ body {
 ========================= */
 
 .ui-window {
-
     width: min(90vw, 520px);
 
-    /* ขนาดสำหรับคอม */
-    height: min(88vh, 680px);
+    /* ให้กรอบพอดีกับเนื้อหา */
+    min-height: 0;
+    height: auto;
 
     padding: 25px;
 
@@ -80,28 +47,21 @@ body {
             145deg,
             #050505 0%,
             #050505 48%,
-            #300000 48%,
-            #b00000 100%
+            #260000 48%,
+            #720000 100%
         );
 
-    border: 4px solid #ff0000;
+    border: 4px solid #b82020;
 
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
 
-    justify-content: flex-start;
-
     box-shadow:
-        0 0 30px #ff000055,
-        0 0 70px #ff000022,
+        0 0 25px #ff000033,
         inset 0 0 30px #000;
 
     overflow: hidden;
-
-    border-radius: 4px;
 }
 
 /* =========================
@@ -109,11 +69,6 @@ body {
 ========================= */
 
 .welcome {
-
-    width: 100%;
-
-    min-height: 32px;
-
     color: #ffffff;
 
     font-size: clamp(16px, 4vw, 24px);
@@ -124,46 +79,36 @@ body {
 
     text-align: center;
 
-    margin-top: 0;
-
-    margin-bottom: 12px;
+    margin-top: 5px;
+    margin-bottom: 22px;
 
     text-shadow:
-        0 0 8px #ff0000,
-        0 0 20px #ff000088,
-        0 0 35px #ff000044;
+        0 0 8px #c00000,
+        0 0 18px #ff000055;
 
-    white-space: nowrap;
-
-    overflow: hidden;
+    min-height: 30px;
 }
 
-/* =========================
-   เคอร์เซอร์
-========================= */
-
 .welcome::after {
-
     content: "|";
 
-    color: #ff0000;
+    color: #d03030;
 
-    margin-left: 5px;
+    margin-left: 4px;
 
     animation: blink 0.7s infinite;
 }
 
 @keyframes blink {
 
-    0%,
-    50% {
+    0%, 50% {
         opacity: 1;
     }
 
-    51%,
-    100% {
+    51%, 100% {
         opacity: 0;
     }
+
 }
 
 /* =========================
@@ -171,21 +116,16 @@ body {
 ========================= */
 
 .subtitle {
+    color: #d05050;
 
-    color: #ff3333;
+    font-size: clamp(9px, 2.5vw, 12px);
 
-    font-size: clamp(8px, 2.3vw, 12px);
+    letter-spacing: 4px;
 
-    letter-spacing: 3px;
+    margin-top: -14px;
+    margin-bottom: 22px;
 
-    text-align: center;
-
-    margin-bottom: 20px;
-
-    opacity: 0.9;
-
-    text-shadow:
-        0 0 8px #ff000066;
+    opacity: 0.85;
 }
 
 /* =========================
@@ -193,33 +133,29 @@ body {
 ========================= */
 
 .circle {
-
-    width: clamp(90px, 22vw, 135px);
-
-    height: clamp(90px, 22vw, 135px);
+    width: clamp(90px, 23vw, 135px);
+    height: clamp(90px, 23vw, 135px);
 
     flex-shrink: 0;
 
     border-radius: 50%;
 
-    border: 5px solid #ff0000;
+    border: 4px solid #b82020;
 
     overflow: hidden;
 
     background: #000;
 
     box-shadow:
-        0 0 20px #ff000099,
-        0 0 40px #ff000033,
+        0 0 18px #ff000055,
+        0 0 35px #ff000022,
         inset 0 0 20px #000;
 
-    margin-bottom: 25px;
+    margin-bottom: 28px;
 }
 
 .circle img {
-
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
@@ -228,18 +164,16 @@ body {
 }
 
 /* =========================
-   Social Buttons
+   ปุ่ม Social
 ========================= */
 
 .buttons {
-
     width: 100%;
 
     display: flex;
-
     flex-direction: column;
 
-    gap: 14px;
+    gap: 15px;
 }
 
 /* =========================
@@ -247,31 +181,24 @@ body {
 ========================= */
 
 .button {
-
     width: 100%;
 
-    height: clamp(55px, 8vh, 72px);
+    height: clamp(58px, 9vh, 78px);
 
-    background:
-        linear-gradient(
-            90deg,
-            #b00000,
-            #e00000
-        );
+    background: #8f0000;
 
-    border: 3px solid #ff3333;
+    border: 3px solid #c52d2d;
 
-    color: #ffffff;
+    color: white;
 
     display: flex;
 
     justify-content: center;
-
     align-items: center;
 
     font-family: 'Orbitron', sans-serif;
 
-    font-size: clamp(14px, 3.8vw, 21px);
+    font-size: clamp(15px, 4vw, 22px);
 
     font-weight: 700;
 
@@ -280,20 +207,111 @@ body {
     text-decoration: none;
 
     text-shadow:
-        0 0 8px #ffffff55;
+        0 0 8px #ffffff33;
 
     box-shadow:
-        0 0 12px #ff000066,
-        inset 0 0 15px #700000;
-
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease,
-        box-shadow 0.2s ease;
+        0 0 10px #ff000033,
+        inset 0 0 13px #520000;
 
     cursor: pointer;
 
-    border-radius: 2px;
+    position: relative;
+
+    opacity: 0;
+
+    transform:
+        translateY(35px)
+        scale(0.85);
+
+    filter: blur(8px);
+
+    animation:
+        summonButton 0.75s cubic-bezier(.2,.8,.2,1) forwards;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+/* =========================
+   เสกทีละช่อง
+========================= */
+
+.button:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.button:nth-child(2) {
+    animation-delay: 0.55s;
+}
+
+.button:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+/* =========================
+   Animation เสก
+========================= */
+
+@keyframes summonButton {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(35px)
+            scale(0.85);
+
+        filter: blur(8px);
+
+        box-shadow:
+            0 0 0 #ff000000,
+            inset 0 0 0 #000000;
+    }
+
+    40% {
+        opacity: 0.5;
+
+        transform:
+            translateY(10px)
+            scale(0.95);
+
+        filter: blur(4px);
+
+        box-shadow:
+            0 0 30px #ff000088,
+            inset 0 0 20px #ff000044;
+    }
+
+    70% {
+        opacity: 1;
+
+        transform:
+            translateY(-3px)
+            scale(1.02);
+
+        filter: blur(0);
+
+        box-shadow:
+            0 0 25px #ff000066,
+            inset 0 0 15px #520000;
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter: blur(0);
+
+        box-shadow:
+            0 0 10px #ff000033,
+            inset 0 0 13px #520000;
+    }
+
 }
 
 /* =========================
@@ -301,39 +319,46 @@ body {
 ========================= */
 
 .social-icon {
-
-    width: 30px;
-
-    height: 30px;
+    width: 32px;
+    height: 32px;
 
     object-fit: contain;
 
-    margin-right: 12px;
+    margin-right: 13px;
 
     flex-shrink: 0;
 
     filter:
-        drop-shadow(0 0 5px #000);
+        drop-shadow(0 0 4px #000);
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
 }
 
 /* =========================
-   Hover คอม
+   Hover
 ========================= */
 
 .button:hover {
+    background: #ad0000;
 
-    background:
-        linear-gradient(
-            90deg,
-            #e00000,
-            #ff0000
-        );
-
-    transform: scale(1.025);
+    transform:
+        translateY(-2px)
+        scale(1.02);
 
     box-shadow:
-        0 0 25px #ff0000aa,
-        inset 0 0 20px #ff5555;
+        0 0 22px #ff000066,
+        inset 0 0 15px #ff333344;
+}
+
+.button:hover .social-icon {
+
+    transform: scale(1.12);
+
+    filter:
+        drop-shadow(0 0 5px #fff)
+        drop-shadow(0 0 8px #ff0000);
 }
 
 /* =========================
@@ -342,7 +367,12 @@ body {
 
 .button:active {
 
-    transform: scale(0.98);
+    transform:
+        scale(0.97);
+
+    box-shadow:
+        0 0 30px #ff000099,
+        inset 0 0 20px #ff333355;
 }
 
 /* =========================
@@ -351,194 +381,77 @@ body {
 
 @media (max-width: 600px) {
 
-    body {
-
-        min-height: 100svh;
-
-        padding: 10px;
-
-        overflow: hidden;
-    }
-
     .ui-window {
-
         width: 92vw;
 
-        /* สำคัญ: ไม่บังคับให้สูง 88vh */
+        /* สำคัญ: ไม่ให้กรอบสูงเต็มจอ */
+        min-height: 0;
         height: auto;
 
-        min-height: 0;
-
-        padding: 16px;
+        padding: 18px;
 
         border-width: 3px;
-
-        overflow: hidden;
     }
 
     .welcome {
-
-        min-height: 25px;
-
-        font-size: 15px;
-
-        letter-spacing: 1.5px;
-
-        margin-bottom: 8px;
+        margin-bottom: 18px;
+        letter-spacing: 2px;
     }
 
     .subtitle {
-
-        font-size: 8px;
-
-        letter-spacing: 2px;
-
-        margin-bottom: 15px;
-    }
-
-    .circle {
-
-        width: 88px;
-
-        height: 88px;
-
-        border-width: 4px;
-
         margin-bottom: 18px;
     }
 
-    .buttons {
+    .circle {
+        margin-bottom: 23px;
+    }
 
-        gap: 10px;
+    .buttons {
+        gap: 12px;
     }
 
     .button {
-
-        height: 55px;
-
-        border-width: 3px;
-
-        font-size: 14px;
-
-        letter-spacing: 1px;
+        height: 60px;
     }
 
     .social-icon {
+        width: 28px;
+        height: 28px;
 
-        width: 25px;
-
-        height: 25px;
-
-        margin-right: 9px;
+        margin-right: 10px;
     }
+
 }
 
 /* =========================
-   มือถือจอเล็กมาก
+   จอเล็กมาก
 ========================= */
 
 @media (max-width: 380px) {
 
-    body {
-
-        padding: 7px;
-    }
-
     .ui-window {
-
         width: 94vw;
 
-        padding: 13px;
+        padding: 14px;
     }
 
     .welcome {
-
-        font-size: 13px;
-
-        letter-spacing: 1px;
-
-        min-height: 22px;
-    }
-
-    .subtitle {
-
-        font-size: 7px;
+        font-size: 14px;
 
         letter-spacing: 1.5px;
-
-        margin-bottom: 12px;
-    }
-
-    .circle {
-
-        width: 78px;
-
-        height: 78px;
-
-        margin-bottom: 15px;
-    }
-
-    .buttons {
-
-        gap: 8px;
     }
 
     .button {
+        height: 55px;
 
-        height: 50px;
-
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .social-icon {
-
-        width: 23px;
-
-        height: 23px;
-
-        margin-right: 8px;
-    }
-}
-
-/* =========================
-   จอสูงน้อย
-========================= */
-
-@media (max-height: 650px) {
-
-    .ui-window {
-
-        padding: 16px;
+        width: 25px;
+        height: 25px;
     }
 
-    .welcome {
-
-        margin-bottom: 7px;
-    }
-
-    .subtitle {
-
-        margin-bottom: 10px;
-    }
-
-    .circle {
-
-        width: 80px;
-
-        height: 80px;
-
-        margin-bottom: 14px;
-    }
-
-    .buttons {
-
-        gap: 8px;
-    }
-
-    .button {
-
-        height: 50px;
-    }
 }
 
 </style>
@@ -548,45 +461,21 @@ body {
 
 <div class="ui-window">
 
-    <!-- =========================
-         WELCOME
-    ========================== -->
-
-    <div
-        class="welcome"
-        id="welcome"
-    ></div>
-
-
-    <!-- =========================
-         Subtitle
-    ========================== -->
+    <!-- WELCOME -->
+    <div class="welcome" id="welcome"></div>
 
     <div class="subtitle">
         NESS • DIGITAL SPACE
     </div>
 
-
-    <!-- =========================
-         รูปโปรไฟล์
-    ========================== -->
-
+    <!-- รูปโปรไฟล์ -->
     <div class="circle">
-
-        <img
-            src="NESS.png"
-            alt="NESS"
-        >
-
+        <img src="NESS.png" alt="NESS">
     </div>
 
-
-    <!-- =========================
-         Social Buttons
-    ========================== -->
+    <!-- ปุ่ม Social -->
 
     <div class="buttons">
-
 
         <!-- ROBLOX -->
 
@@ -598,14 +487,12 @@ body {
         >
 
             <img
-                src="Roblox.png"
+                src="ROBLOX.png"
                 class="social-icon"
                 alt="Roblox"
             >
 
-            <span>
-                ROBLOX
-            </span>
+            <span>ROBLOX</span>
 
         </a>
 
@@ -620,14 +507,12 @@ body {
         >
 
             <img
-                src="tiktok.png"
+                src="TIKTOK.png"
                 class="social-icon"
                 alt="TikTok"
             >
 
-            <span>
-                TIKTOK
-            </span>
+            <span>TIKTOK</span>
 
         </a>
 
@@ -642,17 +527,14 @@ body {
         >
 
             <img
-                src="instagram.png"
+                src="INSTAGRAM.png"
                 class="social-icon"
                 alt="Instagram"
             >
 
-            <span>
-                INSTAGRAM
-            </span>
+            <span>INSTAGRAM</span>
 
         </a>
-
 
     </div>
 
@@ -662,12 +544,13 @@ body {
 <script>
 
 /* =========================
-   WELCOME TYPEWRITER
+   พิมพ์ WELCOME ทีละตัว
 ========================= */
 
 const text = "WELCOME TO MY WORLD";
 
-const welcome = document.getElementById("welcome");
+const welcome =
+    document.getElementById("welcome");
 
 let index = 0;
 
@@ -675,11 +558,15 @@ function typeWelcome() {
 
     if (index < text.length) {
 
-        welcome.textContent += text.charAt(index);
+        welcome.textContent +=
+            text.charAt(index);
 
         index++;
 
-        setTimeout(typeWelcome, 100);
+        setTimeout(
+            typeWelcome,
+            100
+        );
 
     }
 
