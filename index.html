@@ -19,7 +19,6 @@
 body {
     margin: 0;
     min-height: 100vh;
-
     background: #080808;
 
     display: flex;
@@ -35,8 +34,6 @@ body {
 
 .ui-window {
     width: min(90vw, 520px);
-
-    /* ให้กรอบพอดีกับเนื้อหา */
     min-height: 0;
     height: auto;
 
@@ -72,11 +69,8 @@ body {
     color: #ffffff;
 
     font-size: clamp(16px, 4vw, 24px);
-
     font-weight: 800;
-
     letter-spacing: 3px;
-
     text-align: center;
 
     margin-top: 5px;
@@ -91,16 +85,13 @@ body {
 
 .welcome::after {
     content: "|";
-
     color: #d03030;
-
     margin-left: 4px;
 
     animation: blink 0.7s infinite;
 }
 
 @keyframes blink {
-
     0%, 50% {
         opacity: 1;
     }
@@ -108,7 +99,6 @@ body {
     51%, 100% {
         opacity: 0;
     }
-
 }
 
 /* =========================
@@ -119,7 +109,6 @@ body {
     color: #d05050;
 
     font-size: clamp(9px, 2.5vw, 12px);
-
     letter-spacing: 4px;
 
     margin-top: -14px;
@@ -139,11 +128,9 @@ body {
     flex-shrink: 0;
 
     border-radius: 50%;
-
     border: 4px solid #b82020;
 
     overflow: hidden;
-
     background: #000;
 
     box-shadow:
@@ -159,12 +146,11 @@ body {
     height: 100%;
 
     object-fit: cover;
-
     display: block;
 }
 
 /* =========================
-   ปุ่ม Social
+   ปุ่ม
 ========================= */
 
 .buttons {
@@ -176,13 +162,8 @@ body {
     gap: 15px;
 }
 
-/* =========================
-   ปุ่ม
-========================= */
-
 .button {
     width: 100%;
-
     height: clamp(58px, 9vh, 78px);
 
     background: #8f0000;
@@ -192,14 +173,12 @@ body {
     color: white;
 
     display: flex;
-
     justify-content: center;
     align-items: center;
 
     font-family: 'Orbitron', sans-serif;
 
     font-size: clamp(15px, 4vw, 22px);
-
     font-weight: 700;
 
     letter-spacing: 2px;
@@ -251,7 +230,7 @@ body {
 }
 
 /* =========================
-   Animation เสก
+   Animation
 ========================= */
 
 @keyframes summonButton {
@@ -311,11 +290,10 @@ body {
             0 0 10px #ff000033,
             inset 0 0 13px #520000;
     }
-
 }
 
 /* =========================
-   โลโก้
+   ไอคอน
 ========================= */
 
 .social-icon {
@@ -327,6 +305,8 @@ body {
     margin-right: 13px;
 
     flex-shrink: 0;
+
+    display: block;
 
     filter:
         drop-shadow(0 0 4px #000);
@@ -353,7 +333,6 @@ body {
 }
 
 .button:hover .social-icon {
-
     transform: scale(1.12);
 
     filter:
@@ -361,18 +340,8 @@ body {
         drop-shadow(0 0 8px #ff0000);
 }
 
-/* =========================
-   ตอนกด
-========================= */
-
 .button:active {
-
-    transform:
-        scale(0.97);
-
-    box-shadow:
-        0 0 30px #ff000099,
-        inset 0 0 20px #ff333355;
+    transform: scale(0.97);
 }
 
 /* =========================
@@ -383,8 +352,6 @@ body {
 
     .ui-window {
         width: 92vw;
-
-        /* สำคัญ: ไม่ให้กรอบสูงเต็มจอ */
         min-height: 0;
         height: auto;
 
@@ -420,30 +387,26 @@ body {
 
         margin-right: 10px;
     }
-
 }
 
 /* =========================
-   จอเล็กมาก
+   จอเล็ก
 ========================= */
 
 @media (max-width: 380px) {
 
     .ui-window {
         width: 94vw;
-
         padding: 14px;
     }
 
     .welcome {
         font-size: 14px;
-
         letter-spacing: 1.5px;
     }
 
     .button {
         height: 55px;
-
         font-size: 14px;
     }
 
@@ -451,7 +414,6 @@ body {
         width: 25px;
         height: 25px;
     }
-
 }
 
 </style>
@@ -461,7 +423,6 @@ body {
 
 <div class="ui-window">
 
-    <!-- WELCOME -->
     <div class="welcome" id="welcome"></div>
 
     <div class="subtitle">
@@ -470,81 +431,67 @@ body {
 
     <!-- รูปโปรไฟล์ -->
     <div class="circle">
-        <img src="NESS.png" alt="NESS">
+        <img src="./NESS.png" alt="NESS">
     </div>
-
-    <!-- ปุ่ม Social -->
 
     <div class="buttons">
 
         <!-- ROBLOX -->
-
         <a
             class="button"
             href="https://www.roblox.com/th/users/4523803501/profile"
             target="_blank"
             rel="noopener noreferrer"
         >
-
             <img
-                src="Roblox.png"
+                src="./Roblox.png"
                 class="social-icon"
                 alt="Roblox"
             >
 
             <span>ROBLOX</span>
-
         </a>
 
-
         <!-- TIKTOK -->
-
         <a
             class="button"
             href="https://www.tiktok.com/@nest280755"
             target="_blank"
             rel="noopener noreferrer"
         >
-
             <img
-                src="Tiktok.png"
+                src="./Tiktok.png"
                 class="social-icon"
                 alt="TikTok"
             >
 
             <span>TIKTOK</span>
-
         </a>
 
-
         <!-- INSTAGRAM -->
-
         <a
             class="button"
             href="https://www.instagram.com/dcnlp.hp2555/"
             target="_blank"
             rel="noopener noreferrer"
         >
-
             <img
-                src="Instagram.png"
+                src="./Instagram.png"
                 class="social-icon"
                 alt="Instagram"
             >
 
             <span>INSTAGRAM</span>
-
         </a>
 
     </div>
 
 </div>
 
-
 <script>
 
 /* =========================
-   พิมพ์ WELCOME ทีละตัว
+   WELCOME พิมพ์ทีละตัว
 ========================= */
 
 const text = "WELCOME TO MY WORLD";
@@ -567,9 +514,7 @@ function typeWelcome() {
             typeWelcome,
             100
         );
-
     }
-
 }
 
 typeWelcome();
